@@ -1,0 +1,693 @@
+/**
+ * 翻訳の型定義
+ * すべての翻訳ファイルはこの型に準拠する必要があります
+ */
+
+export type Language = 'ja' | 'en' | 'zh' | 'ko' | 'vi' | 'tl' | 'pt' | 'ne' | 'id' | 'th';
+
+export interface Translations {
+  // SEO
+  'seo.title': string;
+  'seo.description': string;
+
+  // Navigation
+  'nav.home': string;
+  'nav.products': string;
+  'nav.about': string;
+  'nav.order': string;
+  'nav.faq': string;
+  'nav.mercari': string;
+  'nav.cart': string;
+  'nav.openMenu': string;
+  'nav.closeMenu': string;
+
+  // Hero
+  'hero.title': string;
+  'hero.subtitle': string;
+  'hero.description': string;
+  'hero.cta': string;
+  'hero.award': string;
+  'hero.firstTime': string;
+  'hero.badge': string;
+  'hero.mercariNote': string;
+  'hero.mercariLabel': string;
+  'hero.mercariText': string;
+
+  // Features
+  'features.title': string;
+  'features.freshTitle': string;
+  'features.freshDesc': string;
+  'features.organicTitle': string;
+  'features.organicDesc': string;
+  'features.directTitle': string;
+  'features.directDesc': string;
+  'features.seasonTitle': string;
+  'features.seasonDesc': string;
+  'features.badge': string;
+  'features.heading': string;
+  'features.subheading': string;
+  'features.feature1.title': string;
+  'features.feature1.desc': string;
+  'features.feature2.title': string;
+  'features.feature2.desc': string;
+  'features.feature3.title': string;
+  'features.feature3.desc': string;
+  'features.feature4.title': string;
+  'features.feature4.desc': string;
+  'features.trust1.title': string;
+  'features.trust1.desc': string;
+  'features.trust2.title': string;
+  'features.trust2.desc': string;
+  'features.trust3.title': string;
+  'features.trust3.desc': string;
+  'features.trust4.title': string;
+  'features.trust4.desc': string;
+
+  // Products
+  'products.title': string;
+  'products.subtitle': string;
+  'products.description': string;
+  'products.sizeS': string;
+  'products.sizeM': string;
+  'products.sizeL': string;
+  'products.addToCart': string;
+  'products.addProduct': string;
+  'products.detail': string;
+  'products.viewDetails': string;
+  'products.inStock': string;
+  'products.lowStock': string;
+  'products.outOfStock': string;
+  'products.notify': string;
+  'products.notifyMe': string;
+  'products.award': string;
+  'products.deleteConfirm': string;
+  'products.deleteDescription': string;
+  'products.remaining': string;
+  'products.soldOut': string;
+  'products.addFavoriteAria': string;
+  'products.removeFavoriteAria': string;
+  'products.editAria': string;
+  'products.deleteAria': string;
+  'products.popularLowStock': string;
+  'products.errorSoldOut': string;
+  'products.addedToCart': string;
+  'products.lowStockWarning': string;
+  'products.removedFromFavorites': string;
+  'products.addedToFavorites': string;
+  'products.ariaLabel': string;
+
+  // Cart
+  'cart.title': string;
+  'cart.empty': string;
+  'cart.continueShopping': string;
+  'cart.stockRemaining': string;
+  'cart.outOfStock': string;
+  'cart.promo3000': string;
+  'cart.promo3000Achieved': string;
+  'cart.promo5000': string;
+  'cart.bulkDiscount': string;
+  'cart.subtotal': string;
+  'cart.shipping': string;
+  'cart.shippingTBD': string;
+  'cart.shippingNote': string;
+  'cart.total': string;
+  'cart.checkout': string;
+  'cart.keepShopping': string;
+
+  // Order Modal
+  'orderModal.title': string;
+  'orderModal.customerInfo': string;
+  'orderModal.name': string;
+  'orderModal.namePlaceholder': string;
+  'orderModal.email': string;
+  'orderModal.emailPlaceholder': string;
+  'orderModal.phone': string;
+  'orderModal.phonePlaceholder': string;
+  'orderModal.address': string;
+  'orderModal.addressPlaceholder': string;
+  'orderModal.payment': string;
+  'orderModal.notes': string;
+  'orderModal.notesPlaceholder': string;
+  'orderModal.orderSummary': string;
+  'orderModal.placeOrder': string;
+  'orderModal.processing': string;
+  'orderModal.success': string;
+  'orderModal.successMessage': string;
+  'orderModal.subtotal': string;
+  'orderModal.shippingFee': string;
+  'orderModal.shippingTBD': string;
+  'orderModal.total': string;
+  'orderModal.shippingAddress': string;
+  'orderModal.emailSubject': string;
+  'orderModal.emailFooter': string;
+
+  // Product Detail
+  'productDetail.features': string;
+  'productDetail.feature1': string;
+  'productDetail.feature2': string;
+  'productDetail.feature3': string;
+  'productDetail.notAvailable': string;
+
+  // Newsletter
+  'newsletter.title': string;
+  'newsletter.subtitle': string;
+  'newsletter.button': string;
+  'newsletter.discount': string;
+  'newsletter.description': string;
+  'newsletter.benefit1': string;
+  'newsletter.benefit2': string;
+  'newsletter.placeholder': string;
+  'newsletter.privacy': string;
+
+  // Footer
+  'footer.copyright': string;
+  'footer.farmTitle': string;
+  'footer.farmDesc': string;
+  'footer.shop': string;
+  'footer.shopProducts': string;
+  'footer.shopSets': string;
+  'footer.shopSubscription': string;
+  'footer.info': string;
+  'footer.infoAbout': string;
+  'footer.infoOrder': string;
+  'footer.infoFaq': string;
+  'footer.infoLaw': string;
+  'footer.infoPrivacy': string;
+  'footer.contact': string;
+  'footer.location': string;
+  'footer.followUs': string;
+  'footer.mercari': string;
+
+  // ChatBot
+  'chatbot.title': string;
+  'chatbot.greeting': string;
+  'chatbot.openChat': string;
+  'chatbot.needHelp': string;
+  'chatbot.online': string;
+  'chatbot.humanSupport': string;
+  'chatbot.inputPlaceholder': string;
+  
+  // ChatBot Quick Replies
+  'chatbot.quickReplies.products': string;
+  'chatbot.quickReplies.delivery': string;
+  'chatbot.quickReplies.payment': string;
+  'chatbot.quickReplies.contact': string;
+  'chatbot.quickReplies.viewProducts': string;
+  'chatbot.quickReplies.freshness': string;
+  'chatbot.quickReplies.deliveryFee': string;
+  'chatbot.quickReplies.deliveryTime': string;
+  'chatbot.quickReplies.creditCard': string;
+  'chatbot.quickReplies.bankTransfer': string;
+  
+  // ChatBot Responses
+  'chatbot.responses.products': string;
+  'chatbot.responses.delivery': string;
+  'chatbot.responses.payment': string;
+  'chatbot.responses.contact': string;
+  'chatbot.responses.freshness': string;
+  'chatbot.responses.deliveryFee': string;
+  'chatbot.responses.deliveryTime': string;
+  'chatbot.responses.creditCard': string;
+  'chatbot.responses.bankTransfer': string;
+  'chatbot.responses.default': string;
+
+  // Testimonials
+  'testimonials.title': string;
+  'testimonials.subtitle': string;
+  'testimonials.badge': string;
+  'testimonials.description': string;
+  'testimonials.purchasedProduct': string;
+  'testimonials.testimonial1.name': string;
+  'testimonials.testimonial1.location': string;
+  'testimonials.testimonial1.comment': string;
+  'testimonials.testimonial1.product': string;
+  'testimonials.testimonial1.date': string;
+  'testimonials.testimonial2.name': string;
+  'testimonials.testimonial2.location': string;
+  'testimonials.testimonial2.comment': string;
+  'testimonials.testimonial2.product': string;
+  'testimonials.testimonial2.date': string;
+  'testimonials.testimonial3.name': string;
+  'testimonials.testimonial3.location': string;
+  'testimonials.testimonial3.comment': string;
+  'testimonials.testimonial3.product': string;
+  'testimonials.testimonial3.date': string;
+  'testimonials.testimonial4.name': string;
+  'testimonials.testimonial4.location': string;
+  'testimonials.testimonial4.comment': string;
+  'testimonials.testimonial4.product': string;
+  'testimonials.testimonial4.date': string;
+  'testimonials.stat1': string;
+  'testimonials.stat2': string;
+  'testimonials.stat3': string;
+  'testimonials.stat4': string;
+
+  // About
+  'about.badge': string;
+  'about.title': string;
+  'about.subtitle': string;
+  'about.description': string;
+  'about.motto': string;
+  'about.description1': string;
+  'about.description2': string;
+  'about.description3': string;
+  'about.story.title': string;
+  'about.story.description': string;
+  'about.mission.title': string;
+  'about.mission.description': string;
+  'about.values.title': string;
+  'about.values.value1': string;
+  'about.values.value2': string;
+  'about.values.value3': string;
+  'about.stat1.value': string;
+  'about.stat1.label': string;
+  'about.stat2.value': string;
+  'about.stat2.label': string;
+  'about.stat3.value': string;
+  'about.stat3.label': string;
+  'about.stat4.value': string;
+  'about.stat4.label': string;
+  'about.imageCaption': string;
+
+  // How To Order
+  'howToOrder.badge': string;
+  'howToOrder.title': string;
+  'howToOrder.description': string;
+  'howToOrder.step1.title': string;
+  'howToOrder.step1.description': string;
+  'howToOrder.step1.details': string;
+  'howToOrder.step2.title': string;
+  'howToOrder.step2.description': string;
+  'howToOrder.step2.details': string;
+  'howToOrder.step3.title': string;
+  'howToOrder.step3.description': string;
+  'howToOrder.step3.details': string;
+  'howToOrder.step4.title': string;
+  'howToOrder.step4.description': string;
+  'howToOrder.step4.details': string;
+  'howToOrder.cta': string;
+  'howToOrder.paymentTitle': string;
+  'howToOrder.paymentDesc': string;
+  'howToOrder.shippingTitle': string;
+  'howToOrder.shippingDesc': string;
+  'howToOrder.deliveryInfo.badge': string;
+  'howToOrder.deliveryInfo.title': string;
+  'howToOrder.deliveryInfo.areaTitle': string;
+  'howToOrder.deliveryInfo.areaText': string;
+  'howToOrder.deliveryInfo.areaNote': string;
+  'howToOrder.deliveryInfo.methodTitle': string;
+  'howToOrder.deliveryInfo.methodText': string;
+  'howToOrder.deliveryInfo.methodNote': string;
+  'howToOrder.deliveryInfo.timeTitle': string;
+  'howToOrder.deliveryInfo.timeText': string;
+  'howToOrder.deliveryInfo.timeNote': string;
+  'howToOrder.deliveryInfo.paymentTitle': string;
+  'howToOrder.deliveryInfo.paymentText': string;
+  'howToOrder.deliveryInfo.paymentNote': string;
+  'howToOrder.deliveryInfo.feeTitle': string;
+  'howToOrder.deliveryInfo.feeDesc1': string;
+  'howToOrder.deliveryInfo.feeDesc2': string;
+  'howToOrder.deliveryInfo.chartTitle': string;
+  'howToOrder.deliveryInfo.chartAlt': string;
+  'howToOrder.deliveryInfo.chartNote': string;
+
+  // Awards
+  'awards.badge': string;
+  'awards.title': string;
+  'awards.description': string;
+  'awards.silverAward': string;
+  'awards.silverAwardEn': string;
+  'awards.organizer': string;
+  'awards.event': string;
+  'awards.product': string;
+  'awards.date': string;
+  'awards.organizerName': string;
+  'awards.eventName': string;
+  'awards.productName': string;
+  'awards.dateValue': string;
+  'awards.clickToEnlarge': string;
+  'awards.close': string;
+  'awards.imageAlt': string;
+  'awards.imageAltExpanded': string;
+  'awards.citation': string;
+  'awards.commitment.title': string;
+  'awards.commitment.description': string;
+  'awards.feature1.title': string;
+  'awards.feature1.description': string;
+  'awards.feature2.title': string;
+  'awards.feature2.description': string;
+  'awards.feature3.title': string;
+  'awards.feature3.description': string;
+  'awards.badgeLabel': string;
+
+  // FAQ
+  'faq.badge': string;
+  'faq.title': string;
+  'faq.subtitle': string;
+  'faq.description': string;
+  'faq.q1': string;
+  'faq.a1': string;
+  'faq.q2': string;
+  'faq.a2': string;
+  'faq.q3': string;
+  'faq.a3': string;
+  'faq.q4': string;
+  'faq.a4': string;
+  'faq.q5': string;
+  'faq.a5': string;
+  'faq.q6': string;
+  'faq.a6': string;
+  'faq.q7': string;
+  'faq.a7': string;
+  'faq.q8': string;
+  'faq.a8': string;
+  'faq.q9': string;
+  'faq.a9': string;
+  'faq.q10': string;
+  'faq.a10': string;
+
+  // Payment
+  'payment.bankTransfer': string;
+  'payment.creditCard': string;
+  'payment.description': string;
+  'payment.bankTransferDesc': string;
+  'payment.creditCardDesc': string;
+  'payment.bankInfo': string;
+  'payment.bankName': string;
+  'payment.branchName': string;
+  'payment.accountType': string;
+  'payment.accountNumber': string;
+  'payment.accountName': string;
+  'payment.bankNote': string;
+
+  // Stripe
+  'stripe.paymentTitle': string;
+  'stripe.loadingPayment': string;
+  'stripe.unavailable': string;
+  'stripe.errorMessage': string;
+  'stripe.unexpectedError': string;
+  'stripe.securityTitle': string;
+  'stripe.securityDesc': string;
+  'stripe.submitPayment': string;
+  'stripe.cancel': string;
+
+  // Order
+  'order.title': string;
+  'order.description': string;
+  'order.orderDetails': string;
+  'order.customerInfo': string;
+  'order.shippingInfo': string;
+  'order.paymentMethod': string;
+  'order.paymentSuccess': string;
+  'order.paymentSuccessDesc': string;
+  'order.emptyCart': string;
+  'order.stripeUnavailable': string;
+  'order.paymentInitError': string;
+  'order.orderReceived': string;
+  'order.orderReceivedDesc': string;
+  'order.orderError': string;
+  'order.orderErrorDesc': string;
+  
+  // Order Modal
+  'orderModal.subtotal': string;
+  'orderModal.shippingFee': string;
+  'orderModal.shippingTBD': string;
+  'orderModal.total': string;
+  'orderModal.shippingAlert': string;
+  'orderModal.emailFooter': string;
+  
+  // Order Form Labels
+  'orderForm.name': string;
+  'orderForm.namePlaceholder': string;
+  'orderForm.email': string;
+  'orderForm.emailPlaceholder': string;
+  'orderForm.phone': string;
+  'orderForm.phonePlaceholder': string;
+  'orderForm.postalCode': string;
+  'orderForm.postalCodePlaceholder': string;
+  'orderForm.prefecture': string;
+  'orderForm.prefecturePlaceholder': string;
+  'orderForm.city': string;
+  'orderForm.cityPlaceholder': string;
+  'orderForm.address': string;
+  'orderForm.addressPlaceholder': string;
+  'orderForm.building': string;
+  'orderForm.buildingPlaceholder': string;
+  'orderForm.notes': string;
+  'orderForm.notesPlaceholder': string;
+  'orderForm.required': string;
+  'orderForm.optional': string;
+  'orderForm.submit': string;
+  'orderForm.submitting': string;
+  'orderForm.cancel': string;
+  
+  // Order Email
+  'orderEmail.orderDetails': string;
+  'orderEmail.subtotal': string;
+  'orderEmail.shippingFee': string;
+  'orderEmail.shippingTBDNote': string;
+  'orderEmail.paymentMethod': string;
+  'orderEmail.bankTransfer': string;
+  'orderEmail.creditCard': string;
+  'orderEmail.customerInfo': string;
+  'orderEmail.shippingAddress': string;
+  'orderEmail.notes': string;
+  'orderEmail.notesNone': string;
+  
+  // Validation
+  'validation.nameRequired': string;
+  'validation.emailInvalid': string;
+  'validation.phoneRequired': string;
+  'validation.postalCodeRequired': string;
+  'validation.prefectureRequired': string;
+  'validation.cityRequired': string;
+  'validation.addressRequired': string;
+  'validation.required': string;
+  'validation.priceInvalid': string;
+  'validation.stockInvalid': string;
+  'validation.fileTooLarge': string;
+  'validation.invalidFileType': string;
+
+  // Cart
+  'cart.title': string;
+  'cart.empty': string;
+  'cart.continueShopping': string;
+  'cart.stockRemaining': string;
+  'cart.outOfStock': string;
+  'cart.promo3000': string;
+  'cart.promo3000Achieved': string;
+  'cart.promo5000': string;
+  'cart.bulkDiscount': string;
+  'cart.shippingNote': string;
+  'cart.subtotal': string;
+  'cart.shipping': string;
+  'cart.shippingTBD': string;
+  'cart.total': string;
+  'cart.checkout': string;
+  'cart.keepShopping': string;
+
+  // Product
+  'product.soldOut': string;
+
+  // Service Worker
+  'serviceWorker.updateAvailable': string;
+  'serviceWorker.updateDescription': string;
+  'serviceWorker.reload': string;
+
+  // Error
+  'error.title': string;
+  'error.description': string;
+  'error.action': string;
+
+  // Privacy & Legal
+  'privacy.title': string;
+  'commerce.title': string;
+
+  // Favorites
+  'favorites.title': string;
+  'favorites.empty': string;
+  'favorites.addToCart': string;
+  'favorites.remove': string;
+
+  // Stock Notification
+  'stockNotification.title': string;
+  'stockNotification.description': string;
+  'stockNotification.emailPlaceholder': string;
+  'stockNotification.submit': string;
+  'stockNotification.success': string;
+  'stockNotification.error': string;
+  'stockNotify.title': string;
+  'stockNotify.description': string;
+  'stockNotify.emailLabel': string;
+  'stockNotify.emailPlaceholder': string;
+  'stockNotify.submit': string;
+
+  // Add Product Modal
+  'addProduct.titleAdd': string;
+  'addProduct.titleEdit': string;
+  'addProduct.descriptionAdd': string;
+  'addProduct.descriptionEdit': string;
+  'addProduct.name': string;
+  'addProduct.price': string;
+  'addProduct.stock': string;
+  'addProduct.stockPlaceholder': string;
+  'addProduct.category': string;
+  'addProduct.description': string;
+  'addProduct.image': string;
+  'addProduct.imagePlaceholder': string;
+  'addProduct.size': string;
+  'addProduct.unit': string;
+  'addProduct.badge': string;
+  'addProduct.badgePlaceholder': string;
+  'addProduct.isAward': string;
+  'addProduct.submit': string;
+  'addProduct.cancel': string;
+  'addProduct.categoryVegetable': string;
+  'addProduct.categoryFruit': string;
+  'addProduct.categorySet': string;
+  'addProduct.sizeS': string;
+  'addProduct.sizeM': string;
+  'addProduct.sizeL': string;
+
+  // Modal
+  'modal.cancel': string;
+  'modal.add': string;
+  'modal.update': string;
+  'modal.delete': string;
+  'modal.close': string;
+
+  // Share
+  'share.title': string;
+  'share.label': string;
+  'share.twitter': string;
+  'share.facebook': string;
+  'share.line': string;
+  'share.copy': string;
+  'share.copied': string;
+
+  // Language
+  'language.select': string;
+  'language.japanese': string;
+  'language.english': string;
+  'language.chinese': string;
+  'language.korean': string;
+  'language.vietnamese': string;
+  'language.tagalog': string;
+  'language.portuguese': string;
+  'language.nepali': string;
+  'language.indonesian': string;
+  'language.thai': string;
+
+  // CTA
+  'cta.badge': string;
+  'cta.title1': string;
+  'cta.title2': string;
+  'cta.description': string;
+  'cta.button1': string;
+  'cta.button2': string;
+  'cta.stat1.title': string;
+  'cta.stat1.desc': string;
+  'cta.stat2.title': string;
+  'cta.stat2.desc': string;
+  'cta.stat3.title': string;
+  'cta.stat3.desc': string;
+
+  // Referral Program
+  'referral.button': string;
+  'referral.title': string;
+  'referral.howItWorks': string;
+  'referral.yourLink': string;
+  'referral.yourCode': string;
+  'referral.shareOn': string;
+  'referral.copied': string;
+  'referral.haveCode': string;
+
+  // Subscription Plan
+  'subscription.button': string;
+  'subscription.title': string;
+
+  // Reviews
+  'reviews.title': string;
+  'reviews.subtitle': string;
+  'reviews.writeReview': string;
+  'reviews.averageRating': string;
+  'reviews.totalReviews': string;
+  'reviews.filterAll': string;
+  'reviews.filter5Star': string;
+  'reviews.filter4Star': string;
+  'reviews.filter3Star': string;
+  'reviews.filter2Star': string;
+  'reviews.filter1Star': string;
+  'reviews.verified': string;
+  'reviews.helpful': string;
+  'reviews.notHelpful': string;
+  'reviews.report': string;
+  'reviews.noReviews': string;
+  'reviews.beFirst': string;
+  'reviews.loadMore': string;
+  'reviews.showLess': string;
+  
+  // Review Modal
+  'reviewModal.title': string;
+  'reviewModal.subtitle': string;
+  'reviewModal.rating': string;
+  'reviewModal.ratingRequired': string;
+  'reviewModal.productQuality': string;
+  'reviewModal.freshness': string;
+  'reviewModal.delivery': string;
+  'reviewModal.reviewTitle': string;
+  'reviewModal.reviewTitlePlaceholder': string;
+  'reviewModal.reviewText': string;
+  'reviewModal.reviewTextPlaceholder': string;
+  'reviewModal.reviewerName': string;
+  'reviewModal.reviewerNamePlaceholder': string;
+  'reviewModal.reviewerEmail': string;
+  'reviewModal.reviewerEmailPlaceholder': string;
+  'reviewModal.anonymous': string;
+  'reviewModal.termsAgree': string;
+  'reviewModal.termsLink': string;
+  'reviewModal.submit': string;
+  'reviewModal.submitting': string;
+  'reviewModal.cancel': string;
+  'reviewModal.success': string;
+  'reviewModal.successMessage': string;
+  'reviewModal.error': string;
+  'reviewModal.errorMessage': string;
+  'reviewModal.moderation': string;
+  'reviewModal.characterCount': string;
+  
+  // Add Product Modal
+  'addProduct.titleAdd': string;
+  'addProduct.titleEdit': string;
+  'addProduct.descriptionAdd': string;
+  'addProduct.descriptionEdit': string;
+  'addProduct.name': string;
+  'addProduct.description': string;
+  'addProduct.price': string;
+  'addProduct.unit': string;
+  'addProduct.image': string;
+  'addProduct.imagePlaceholder': string;
+  'addProduct.badge': string;
+  'addProduct.badgePlaceholder': string;
+  'addProduct.stock': string;
+  'addProduct.stockPlaceholder': string;
+  'addProduct.productAdded': string;
+  'addProduct.productUpdated': string;
+  'addProduct.selectImage': string;
+  'addProduct.uploading': string;
+  'addProduct.uploadProgress': string;
+  'addProduct.imagePreview': string;
+  'addProduct.changeImage': string;
+  'addProduct.uploadError': string;
+  'addProduct.uploadSuccess': string;
+  
+  // Modal
+  'modal.cancel': string;
+  'modal.add': string;
+  'modal.update': string;
+  'modal.delete': string;
+  'modal.close': string;
+}
+
+// 翻訳ファイルの型
+export type TranslationData = Record<keyof Translations, string>;
